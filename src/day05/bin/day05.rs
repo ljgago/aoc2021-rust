@@ -4,11 +4,23 @@ mod part1;
 mod part2;
 
 fn main() {
-    let _input = include_bytes!("../input.txt");
+    let str_input = include_str!("../input.txt");
+    let input = parse(str_input);
 
     println!("--- Part One ---");
-    println!("Result: {}", part1::result().unwrap());
+    println!("Result: {}", part1::compute_solution(&input));
 
     println!("--- Part Two ---");
-    println!("Result: {}", part2::result().unwrap());
+    println!("Result: {}", part2::compute_solution(&input));
+}
+
+fn parse(s: &str) -> Vec<(Vec<usize>, Vec<usize>)> {
+    s.lines().map(|line| {
+        let (start, end) = line.split_once(" -> ").unwrap();
+        (
+            start.split(",").map(|s| s.parse::<usize>().unwrap()).collect(),
+              end.split(",").map(|e| e.parse::<usize>().unwrap()).collect(),
+        )
+    })
+    .collect()
 }

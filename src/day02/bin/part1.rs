@@ -2,20 +2,20 @@
 
 use crate::Command;
 
-pub fn calc_position_depth(commands: &[Command])-> Result<i32, &'static str> {
-    let mut position: i32 = 0;
-    let mut depth: i32 = 0;
+pub fn part1(commands: &[Command])-> usize {
+    let mut position: usize = 0;
+    let mut depth: usize = 0;
 
     for command in commands.iter() {
         match command.name.as_str() {
             "forward" => position += command.value,
             "down" => depth += command.value,
             "up" => depth -= command.value,
-            _ => return Err("Command not found"),
+            _ => (),
         }
     }
 
-    Ok(position * depth)
+    position * depth
 }
 
 #[cfg(test)]
@@ -23,19 +23,10 @@ mod day02 {
     use super::*;
 
     #[test]
-    fn test_calc_position_depth() {
-        let input: Vec<Command> = vec![
-            "forward 5",
-            "down 5",
-            "forward 8",
-            "up 3",
-            "down 8",
-            "forward 2"
-        ]
-        .iter()
-        .flat_map(|&x| x.parse())
-        .collect();
+    fn test_part1() {
+        let input = include_str!("../tests.txt");
+        let input = crate::parse(input);
 
-        assert_eq!(Ok(150), calc_position_depth(&input));
+        assert_eq!(150, part1(&input));
     }
 }

@@ -4,14 +4,18 @@ mod part1;
 mod part2;
 
 fn main() {
-    let input: Vec<i32> = include_str!("../input.txt")
-        .lines()
-        .flat_map(|x| x.trim().parse::<i32>())
-        .collect();
+    let input = include_str!("../input.txt");
+    let input = parse(input);
 
     println!("--- Part One ---");
-    println!("Result: {}", part1::count_higher_measure_functional(&input).unwrap());
+    println!("Result: {}", part1::part1_functional(&input));
 
     println!("--- Part Two ---");
-    println!("Result: {}", part2::count_higher_measure_functional(&input, 3).unwrap());
+    println!("Result: {}", part2::part2_functional(&input, 3));
+}
+
+fn parse(s: &str) -> Vec<usize> {
+    s.lines()
+        .map(|x| x.trim().parse().unwrap())
+        .collect()
 }

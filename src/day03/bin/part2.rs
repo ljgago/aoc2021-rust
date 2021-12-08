@@ -1,5 +1,16 @@
 //! # Advent of Code - Day 3 - Part Two
 
+pub fn part2(input: &[String]) -> i32 {
+
+    let most_common: Vec<String> = compute_rating(&input, 0, "most_common");
+    let least_common: Vec<String> = compute_rating(&input, 0, "least_common");
+
+    let most_common_value: i32 = i32::from_str_radix(&most_common[0], 2).unwrap();
+    let least_common_value: i32 = i32::from_str_radix(&least_common[0], 2).unwrap();
+
+    most_common_value * least_common_value
+}
+
 fn compute_rating(input: &[String], index: usize, mode: &str) -> Vec<String> {
     if input.len() == 1 {
         return input.to_vec();
@@ -52,64 +63,16 @@ fn compute_rating(input: &[String], index: usize, mode: &str) -> Vec<String> {
     return compute_rating(&filtered_input, index + 1, mode);
 }
 
-pub fn compute_life_support(input: &[String]) -> Result<i32, &'static str> {
-
-    let most_common: Vec<String> = compute_rating(&input, 0, "most_common");
-    let least_common: Vec<String> = compute_rating(&input, 0, "least_common");
-
-    let most_common_value: i32 = i32::from_str_radix(&most_common[0], 2).unwrap();
-    let least_common_value: i32 = i32::from_str_radix(&least_common[0], 2).unwrap();
-
-    Ok(most_common_value * least_common_value)
-}
-
-
 #[cfg(test)]
 mod day03 {
     use super::*;
 
     #[test]
-    fn test_compute_life_support() {
-        let input: Vec<String> = vec![
-            "00100",
-            "11110",
-            "10110",
-            "10111",
-            "10101",
-            "01111",
-            "00111",
-            "11100",
-            "10000",
-            "11001",
-            "00010",
-            "01010",
-        ]
-        .iter()
-        .map(|&x| x.to_owned())
-        .collect();
+    fn test_part2() {
+        let input = include_str!("../tests.txt");
+        let input = crate::parse(input);
 
-        assert_eq!(Ok(230), compute_life_support(&input));
-    }
-
-    #[test]
-    fn test_compute_rating() {
-        let input: Vec<String> = vec![
-            "00100",
-            "11110",
-            "10110",
-            "10111",
-            "10101",
-            "01111",
-            "00111",
-            "11100",
-            "10000",
-            "11001",
-            "00010",
-            "01010",
-        ]
-        .iter()
-        .map(|&x| x.to_owned())
-        .collect();
+        assert_eq!(230, part2(&input));
 
         assert_eq!(vec!["10111"], compute_rating(&input, 0, "most_common"));
         assert_eq!(vec!["01010"], compute_rating(&input, 0, "least_common"));

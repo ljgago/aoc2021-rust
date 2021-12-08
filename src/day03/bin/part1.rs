@@ -1,6 +1,6 @@
 //! # Advent of Code - Day 3 - Part One
 
-pub fn compute_power_consumption(input: &[String]) -> Result<i32, &'static str> {
+pub fn part1(input: &[String]) -> i32 {
     let num_len = input[0].len();
 
     let gamma_rate_str = input
@@ -26,7 +26,7 @@ pub fn compute_power_consumption(input: &[String]) -> Result<i32, &'static str> 
     let gamma_rate = u32::from_str_radix(&gamma_rate_str, 2).unwrap();
     let epsilon_rate = !(gamma_rate as u32) & mask;
 
-    Ok((gamma_rate * epsilon_rate) as i32)
+    (gamma_rate * epsilon_rate) as i32
 }
 
 #[cfg(test)]
@@ -34,25 +34,10 @@ mod day03 {
     use super::*;
 
     #[test]
-    fn test_compute_power_consumption() {
-        let input: Vec<String> = vec![
-            "00100",
-            "11110",
-            "10110",
-            "10111",
-            "10101",
-            "01111",
-            "00111",
-            "11100",
-            "10000",
-            "11001",
-            "00010",
-            "01010",
-        ]
-        .iter()
-        .map(|&x| x.to_owned())
-        .collect();
+    fn test_part1() {
+        let input = include_str!("../tests.txt");
+        let input = crate::parse(input);
 
-        assert_eq!(Ok(198), compute_power_consumption(&input));
+        assert_eq!(198, part1(&input));
     }
 }

@@ -1,7 +1,7 @@
 //! # Advent of Code - Day 16 - Part Two
 
-pub fn result() -> Result<i64, &'static str> {
-    Ok(0)
+pub fn part2() -> i32 {
+    return 0;
 }
 
 #[cfg(test)]
@@ -9,7 +9,7 @@ mod day16 {
     use super::*;
 
     #[test]
-    fn test_result() {
-        assert_eq!(Ok(0), result());
+    fn test_part2() {
+        assert_eq!(0, part2());
     }
 }

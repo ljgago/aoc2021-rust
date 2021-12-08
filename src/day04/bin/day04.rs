@@ -8,10 +8,10 @@ fn main() {
     let (numbers, mut boards) = parse(input);
 
     println!("--- Part One ---");
-    println!("Result: {}", part1::bingo_score(&numbers, &mut boards).unwrap());
+    println!("Result: {}", part1::part1(&numbers, &mut boards));
 
     println!("--- Part Two ---");
-    println!("Result: {}", part2::bingo_score(&numbers, &mut boards).unwrap());
+    println!("Result: {}", part2::part2(&numbers, &mut boards));
 }
 
 fn parse(s: &str) -> (Vec<i32>, Vec<Vec<Vec<i32>>>) {

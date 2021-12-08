@@ -45,7 +45,7 @@ that costs the least fuel is horizontal position `2`:
   - Move from `2` to `2`: `0` fuel
   - Move from `14` to `2`: `12` fuel
 
-This costs a total of `37` fuel. This is the cheapest possible outcome; more
+This costs a total of _**`37`**_ fuel. This is the cheapest possible outcome; more
 expensive outcomes include aligning at position `1` (`41` fuel), position `3` (`39`
 fuel), or position `10` (`71` fuel).
 
@@ -78,7 +78,7 @@ becomes `5`:
   - Move from `2` to `5`: `6` fuel
   - Move from `14` to `5`: `45` fuel
 
-This costs a total of `168` fuel. This is the new cheapest possible outcome;
+This costs a total of _**`168`**_ fuel. This is the new cheapest possible outcome;
 the old alignment position (`2`) now costs `206` fuel instead.
 
 Determine the horizontal position that the crabs can align to using the least

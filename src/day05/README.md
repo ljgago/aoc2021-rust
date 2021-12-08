@@ -53,7 +53,7 @@ lines `0,9 -> 5,9` and `0,9 -> 2,9`.
 
 To avoid the most dangerous areas, you need to determine _**the number of
 points where at least two lines overlap**_. In the above example, this is
-anywhere in the diagram with a `2` or larger - a total of `5` points.
+anywhere in the diagram with a `2` or larger - a total of _**`5`**_ points.
 
 Consider only horizontal and vertical lines. _**At how many points do at least
 two lines overlap?**_
@@ -86,7 +86,7 @@ following diagram:
 
 You still need to determine _**the number of points where at least two lines
 overlap**_. In the above example, this is still anywhere in the diagram with a
-`2` or larger - now a total of `12` points.
+`2` or larger - now a total of _**`12`**_ points.
 
 Consider all of the lines. _**At how many points do at least two lines
 overlap?**_

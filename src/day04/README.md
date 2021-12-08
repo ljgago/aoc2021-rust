@@ -69,12 +69,12 @@ Finally, `24` is drawn:
 
 At this point, the third board _**wins**_ because it has at least one complete
 row or column of marked numbers (in this case, the entire top row is
-marked: `14 21 17 24 4`).
+marked: _**`14 21 17 24 4`**_).
 
 The _**score**_ of the winning board can now be calculated. Start by finding the
 _**sum of all unmarked numbers**_ on that board; in this case, the sum is `188`.
 Then, multiply that sum by _**the number that was just called**_ when the board
-won, `24`, to get the final score, `188 * 24 = 4512`.
+won, `24`, to get the final score, _**`188 * 24 = 4512`**_.
 
 To guarantee victory against the giant squid, figure out which board will
 win first. _**What will your final score be if you choose that board?**_
@@ -92,6 +92,7 @@ which boards it picks, it will win for sure.
 In the above example, the second board is the last to win, which happens
 after `13` is eventually called and its middle column is completely marked.
 If you were to keep playing until this point, the second board would have a
-sum of unmarked numbers equal to `148` for a final score of `148 * 13 = 1924`.
+sum of unmarked numbers equal to `148` for a final score of _**`148 * 13 = 1924`**_.
 
-Figure out which board will win last. _**Once it wins, what would its final score be?**_
+Figure out which board will win last. _**Once it wins, what would its final
+score be?**_

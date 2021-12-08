@@ -62,7 +62,7 @@ measurement.) In the example above, the changes are as follows:
     260 (decreased)
     263 (increased ^)
 
-In this example, there are `7` measurements that are larger than the previous
+In this example, there are _**`7`**_ measurements that are larger than the previous
 measurement.
 
 _**How many measurements are larger than the previous measurement?**_
@@ -108,7 +108,7 @@ In the above example, the sum of each three-measurement window is as follows:
     G: 769 (increased ^)
     H: 792 (increased ^)
 
-In this example, there are `5` sums that are larger than the previous sum.
+In this example, there are _**`5`**_ sums that are larger than the previous sum.
 
 Consider sums of a three-measurement sliding window. _**How many sums are
 larger than the previous sum?**_

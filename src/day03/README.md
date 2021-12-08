@@ -42,12 +42,12 @@ the second bit of the gamma rate is `0`.
 The most common value of the third, fourth, and fifth bits are `1`, `1`, and `0`,
 respectively, and so the final three bits of the gamma rate are `110`.
 
-So, the gamma rate is the binary number `10110`, or `22` in decimal.
+So, the gamma rate is the binary number `10110`, or _**`22`**_ in decimal.
 
 The epsilon rate is calculated in a similar way; rather than use the most
 common bit, the least common bit from each position is used. So, the
 epsilon rate is `01001`, or `9` in decimal. Multiplying the gamma rate (`22`) by
-the epsilon rate (`9`) produces the power consumption, `198`.
+the epsilon rate (`9`) produces the power consumption, _**`198`**_.
 
 Use the binary numbers in your diagnostic report to calculate the gamma
 rate and epsilon rate, then multiply them together. _**What is the power
@@ -102,7 +102,7 @@ example diagnostic report from above:
     (one each). So, to find the _**oxygen generator rating**_, keep the number
     with a `1` in that position: `10111`.
   - As there is only one number left, stop; the _**oxygen generator rating**_ is
-    `10111`, or `23` in decimal.
+    `10111`, or _**`23`**_ in decimal.
 
 Then, to determine the _**CO2 scrubber rating**_ value from the same example above:
 
@@ -117,10 +117,10 @@ Then, to determine the _**CO2 scrubber rating**_ value from the same example abo
     (one each). So, to find the _**CO2 scrubber rating**_, keep the number with
     a `0` in that position: `01010`.
   - As there is only one number left, stop; the _**CO2 scrubber rating**_ is
-    `01010`, or `10` in decimal.
+    `01010`, or _**`10`**_ in decimal.
 
 Finally, to find the life support rating, multiply the oxygen generator
-rating (`23`) by the CO2 scrubber rating (`10`) to get `230`.
+rating (`23`) by the CO2 scrubber rating (`10`) to get _**`230`**_.
 
 Use the binary numbers in your diagnostic report to calculate the oxygen
 generator rating and CO2 scrubber rating, then multiply them together. _**What

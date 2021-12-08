@@ -33,7 +33,7 @@ So, suppose you have a lanternfish with an internal timer value of `3`:
   - After another day, the first lanternfish would have an internal timer
     of `5`, and the second lanternfish would have an internal timer of `7`.
 
-A lanternfish that creates a new fish resets its timer to `6`, _**not**_ `7` (because
+A lanternfish that creates a new fish resets its timer to `6`, _**not `7`**_ (because
 `0` is included as a valid timer value). The new lanternfish starts with an
 internal timer of `8` and does not start counting down until the next day.
 
@@ -72,7 +72,7 @@ Each day, a `0` becomes a `6` and adds a new `8` to the end of the list, while
 each other number decreases by 1 if it was present at the start of the day.
 
 In this example, after 18 days, there are a total of `26` fish. After `80`
-days, there would be a total of `5934`.
+days, there would be a total of _**`5934`**_.
 
 Find a way to simulate lanternfish. _**How many lanternfish would there be
 after 80 days?**_
@@ -82,7 +82,7 @@ after 80 days?**_
 Suppose the lanternfish live forever and have unlimited food and space.
 Would they take over the entire ocean?
 
-After 256 days in the example above, there would be a total of `26984457539`
+After 256 days in the example above, there would be a total of _**`26984457539`**_
 lanternfish!
 
 _**How many lanternfish would there be after 256 days?**_

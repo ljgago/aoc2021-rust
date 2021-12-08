@@ -2,7 +2,7 @@
 
 use std::collections::HashMap;
 
-pub fn compute_solution(vents_lines: &[(Vec<usize>, Vec<usize>)]) -> usize {
+pub fn part2(vents_lines: &[(Vec<usize>, Vec<usize>)]) -> usize {
     let map_zero: HashMap<Vec<usize>, usize> = HashMap::new();
 
     vents_lines.iter()
@@ -82,9 +82,10 @@ mod day05 {
     use super::*;
 
     #[test]
-    fn test_compute_solution() {
+    fn test_part2() {
         let str_input = include_str!("../tests.txt");
         let input = crate::parse(str_input);
-        assert_eq!(12, compute_solution(&input));
+
+        assert_eq!(12, part2(&input));
     }
 }

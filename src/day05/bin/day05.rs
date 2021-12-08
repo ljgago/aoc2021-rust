@@ -8,10 +8,10 @@ fn main() {
     let input = parse(str_input);
 
     println!("--- Part One ---");
-    println!("Result: {}", part1::compute_solution(&input));
+    println!("Result: {}", part1::part1(&input));
 
     println!("--- Part Two ---");
-    println!("Result: {}", part2::compute_solution(&input));
+    println!("Result: {}", part2::part2(&input));
 }
 
 fn parse(s: &str) -> Vec<(Vec<usize>, Vec<usize>)> {

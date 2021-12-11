@@ -3,9 +3,6 @@
 mod part1;
 mod part2;
 
-use std::str::FromStr;
-use std::convert::Infallible;
-
 fn main() {
     let input = include_str!("../input.txt");
     let input = parse(input);
@@ -17,11 +14,8 @@ fn main() {
     println!("Result: {}", part2::part2(&input));
 }
 
-fn parse(s: &str) -> Vec<Command> {
-    s.lines()
-        .map(|x| x.trim().parse().unwrap())
-        .collect()
-}
+use std::str::FromStr;
+use std::convert::Infallible;
 
 #[derive(Debug, PartialEq, Clone)]
 pub struct Command {
@@ -44,4 +38,10 @@ impl FromStr for Command {
             value,
         })
     }
+}
+
+fn parse(s: &str) -> Vec<Command> {
+    s.lines()
+        .map(|x| x.trim().parse().unwrap())
+        .collect()
 }
